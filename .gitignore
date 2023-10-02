@@ -1,0 +1,25 @@
+# Logs
+logs
+*.log
+
+# Dependency directories
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# dotenv enviroment variables file
+.env
+.env.prod
+.env.local
+
+# build / generated output
+dist
+.build
+
+# ide config/directories
+.idea
+
+# husky config
+.husky/*
+!.husky/commit-msg

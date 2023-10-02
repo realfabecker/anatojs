@@ -1,0 +1,44 @@
+{
+  "name": "@sintese/nodets",
+  "version": "1.0.0",
+  "description": "Síntese NodeTS",
+  "main": "src/index.ts",
+  "scripts": {
+    "prepare": "husky install",
+    "debug": "node -r ts-node/register --inspect=0.0.0.0:9229 src/index.ts",
+    "build": "tsc",
+    "watch": "nodemon"
+  },
+  "author": {
+    "name": "Rafael Becker"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "license": "MIT",
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
+  },
+  "nodemonConfig": {
+    "watch": ["src"],
+    "ext": "ts,json",
+    "execMap": {
+      "ts": "node --inspect=0.0.0.0:9229 --require ts-node/register"
+    }
+  },  
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@types/node": "^16.9.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.0",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  }
+}
